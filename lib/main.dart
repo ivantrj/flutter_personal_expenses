@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, import_of_legacy_library_into_null_safe, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -47,7 +47,7 @@ class MyHomePage extends StatelessWidget {
         title: Text("Flutter App"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
@@ -56,6 +56,30 @@ class MyHomePage extends StatelessWidget {
               color: Colors.blue,
               elevation: 5,
               child: Text("CHART"),
+            ),
+          ),
+          Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('Add Transaction'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.purple,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Column(

@@ -105,9 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Chart(
-              recentTransactions: [],
-            ),
+            Chart(_recentTransactions),
             TransactionList(_userTransactions),
           ],
         ),

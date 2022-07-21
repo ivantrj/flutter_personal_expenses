@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
               fontSize: 20,
               fontWeight: FontWeight.bold),
         ),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              button: TextStyle(color: Colors.white),
+            ),
       ),
       home: MyHomePage(),
     );
